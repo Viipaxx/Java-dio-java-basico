@@ -1,17 +1,32 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class ContaTerminal {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Scanner sc = new Scanner(System.in);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println("""
+                Olá, Bem Vindo(a) ao banco da DIO.
+                Siga as instruções abaixo para criar a sua conta no nosso banco.
+                """);
+
+        System.out.print("Insira o seu nome completo: ");
+        String nome = sc.nextLine();
+
+        System.out.print("Insira o número da sua conta: (4 digitos) ");
+        int numeroConta = sc.nextInt();
+
+        System.out.print("Insira o valor de depósito inicial: R$ ");
+        double saldo = sc.nextDouble();
+
+        System.out.print("Insira o número de sua agência: ");
+        sc.nextLine();
+        String agencia = sc.nextLine();
+
+
+        System.out.println("Suporte: 'Olá "+ nome + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numeroConta + " e seu saldo R$ " + saldo + " já está disponível para saque\'");
+
+        sc.close();
+
     }
 }
